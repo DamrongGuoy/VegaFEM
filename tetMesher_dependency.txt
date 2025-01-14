@@ -1,12 +1,17 @@
-
 Dependency of VegaFEM/libraries/mesher/tetMesher.{h,cpp} under libraries/ directory.
 
-mesher/tetMesher.h
+The tetMesher depends on 9 directories (basicAlgorithms/, include/, mesh/ mesher/,
+minivector/, objMesh/, performanceCounter/, volumetricMesh/, and windingNumber/) out
+of 55 directories in VegaFEM/libraries/.
+
+mesher/
+tetMesher.h
  include "vec3d.h"
  include "objMesh.h"
  include "tetMesh.h"
  include "delaunayMesher.h"
-mesher/tetMesher.cpp
+mesher/
+tetMesher.cpp
  include "tetMesher.h"
  include "triangleTetIntersection.h"
  include "objMeshOrientable.h"
@@ -61,6 +66,11 @@ predicates.h
  include "initPredicates.h"
 predicates.cpp
  include "predicates.h"
+simpleSphere.h
+ include "minivector.h"
+ include "boundingBox.h"
+simpleSphere.cpp
+ include "simpleSphere.h"
 tetKey.h
  include "triKey.h"
  include "vec4i.h"
@@ -152,12 +162,28 @@ objMesh.cpp
  include "disjointSet.h"
  include "objMesh.h"
 objMeshOctree.h
+ include "octree.h"
+ include "objMesh.h"
 objMeshOctree.cpp
+ include "triple.h"
+ include "objMeshOctree.h"
 objMeshOrientable.h
+ include "objMesh.h"
 objMeshOrientable.cpp
+ include "objMeshOrientable.h"
+octree.h
+ include "minivector.h"
+ include "boundingBox.h"
+ include "triangle.h"
+ include "simpleSphere.h"
+ include "openGL-headers.h"
+octree.cpp
+ include "octree.h"
+ include "triangle.h"
 
 performanceCounter/
 performanceCounter.h (no performanceCounter.cpp)
+ include std only
 
 volumetricMesh/
 tetMesh.h
@@ -168,13 +194,39 @@ tetMesh.cpp
  include "volumetricMeshParser.h"
  include "geometryQuery.h"
 volumetricMesh.h
+ include "minivector.h"
+ include "boundingBox.h"
 volumetricMesh.cpp
+ include "volumetricMeshParser.h"
+ include "volumetricMesh.h"
+ include "volumetricMeshENuMaterial.h"
+ include "volumetricMeshOrthotropicMaterial.h"
+ include "volumetricMeshMooneyRivlinMaterial.h"
+ include "range.h"
+volumetricMeshENuMaterial.h
+ include "volumetricMesh.h"
+volumetricMeshENuMaterial.cpp
+ include "volumetricMeshENuMaterial.h"
+volumetricMeshMooneyRivlinMaterial.h
+ include "volumetricMesh.h"
+volumetricMeshMooneyRivlinMaterial.cpp
+ include "volumetricMeshMooneyRivlinMaterial.h"
+volumetricMeshOrthotropicMaterial.h
+ include "volumetricMesh.h"
+volumetricMeshOrthotropicMaterial.cpp
+ include "volumetricMeshOrthotropicMaterial.h"
 volumetricMeshParser.h
+ include std only
 volumetricMeshParser.cpp
+ include "volumetricMeshParser.h"
 
 windingNumber/
 windingNumber.h
+ include "objMesh.h"
+ include "minivector.h"
 windingNumber.cpp
+ include "windingNumber.h"
+ include "macros.h"
 
 
 
