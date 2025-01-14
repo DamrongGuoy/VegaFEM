@@ -4,6 +4,8 @@ The tetMesher depends on 9 directories (basicAlgorithms/, include/, mesh/ mesher
 minivector/, objMesh/, performanceCounter/, volumetricMesh/, and windingNumber/) out
 of 55 directories in VegaFEM/libraries/.
 
+The tetMesher needs 9 directories, 43 .h files, and 30 .cpp files.
+
 mesher/
 tetMesher.h
  include "vec3d.h"
