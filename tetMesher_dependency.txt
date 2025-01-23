@@ -6,6 +6,11 @@ of 55 directories in VegaFEM/libraries/.
 
 The tetMesher needs 9 directories, 43 .h files, and 30 .cpp files.
 
+I surveyed this dependency on January 14, 2025 before v4.0.5 (January 22, 2025).
+It should still work.
+
+Damrong Guoy
+
 mesher/
 tetMesher.h
  include "vec3d.h"
